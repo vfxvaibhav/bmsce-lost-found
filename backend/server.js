@@ -43,11 +43,13 @@ const authRoutes = require('./routes/auth');
 const itemRoutes = require('./routes/items');
 const claimRoutes = require('./routes/claims');
 const adminRoutes = require('./routes/admin');
+const initDbRoute = require('./routes/init-db');
 
 app.use('/api/auth', authRoutes);
 app.use('/api/items', itemRoutes);
 app.use('/api/claims', claimRoutes);
 app.use('/api/admin', adminRoutes);
+app.post('/api/init-db', initDbRoute);
 
 // Health check
 app.get('/api/health', (req, res) => {
