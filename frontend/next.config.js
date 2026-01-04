@@ -3,7 +3,6 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['localhost'],
     unoptimized: true
   },
   async rewrites() {
@@ -15,7 +14,9 @@ const nextConfig = {
           : 'http://localhost:5000/api/:path*'
       }
     ];
-  }
+  },
+  trailingSlash: false,
+  output: 'standalone'
 };
 
 module.exports = nextConfig;

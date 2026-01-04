@@ -9,6 +9,7 @@
     "build": "cd frontend && npm run build",
     "start": "cd frontend && npm start",
     "seed": "cd backend && node seed.js",
+    "prod-seed": "cd backend && node production-seed.js",
     "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install"
   },
   "keywords": ["lost-found", "bmsce", "nextjs", "nodejs"],
@@ -16,5 +17,8 @@
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^7.6.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
